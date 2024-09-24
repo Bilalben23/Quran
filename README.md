@@ -22,7 +22,9 @@ Throughout the development of this project, I gained valuable experience in seve
 - **State Management**: Gained proficiency in using `useState` and `useEffect` hooks for managing component state and side effects.
 - **Routing**: Mastered navigation between different components and views using `react-router-dom`.
 
-Here's the updated README in Arabic:
+## Visit the App
+You can visit the Quran App at your-deployed-app-url. [visit]()
+---
 
 # تطبيق القرآن
 
@@ -47,3 +49,6 @@ Here's the updated README in Arabic:
 - **استدعاءات API**: تعلمت كيفية استدعاء واجهات برمجة التطبيقات والتعامل مع البيانات المسترجعة بفعالية.
 - **إدارة الحالة**: اكتسبت مهارة في استخدام `useState` و `useEffect` لإدارة حالة المكون وتأثيراته الجانبية.
 - **التوجيه**: أتقنت التنقل بين المكونات والعروض المختلفة باستخدام `react-router-dom`.
+  
+## زيارة التطبيق
+يمكنك زيارة تطبيق القرآن على ()[زيارة التطبيق]
