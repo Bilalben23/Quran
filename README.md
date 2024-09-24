@@ -55,3 +55,5 @@ You can visit the Quran App at [Quran App](https://bilalben23.github.io/Quran/).
 
 ## زيارة التطبيق
 يمكنك زيارة تطبيق القرآن على [زيارة التطبيق](https://bilalben23.github.io/Quran/).
+
+![image](https://github.com/user-attachments/assets/b6a58b14-996d-4bf8-827f-10edf9affbca)
