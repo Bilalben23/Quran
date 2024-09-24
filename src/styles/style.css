@@ -1,0 +1,900 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Alkalami&family=Amiri+Quran&family=DM+Serif+Text:ital@0;1&family=Gulzar&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Kdam+Thmor+Pro&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&family=Lemonada:wght@300;400;500;600&family=Manrope:wght@200;300;400;500;600&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600&family=Playpen+Sans:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Rakkas&family=Readex+Pro:wght@200;300;400;500;600&family=Reem+Kufi+Ink&family=Reem+Kufi:wght@400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Ubuntu:ital,wght@0,300;0,400;1,300&family=Vazirmatn:wght@100;200;300;400;500;600&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to bottom, #192655, #132043, #072541, #141E46) no-repeat center;
+    background-size: cover;
+}
+
+/* *==========> Style the header <==========*/
+
+header {
+    width: 100%;
+    background-color: #0C356A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    & img {
+        width: 75px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        margin-right: 45px;
+    }
+
+    & nav {
+        width: 65%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 20px;
+
+        & ul {
+            width: 65%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & li {
+                list-style: none;
+            }
+        }
+
+        & a {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #000;
+        }
+
+        & a:hover {
+            color: #E3651D;
+        }
+    }
+
+    .menu-icon {
+        margin-right: 20px;
+        display: none;
+
+        & input {
+            display: none;
+        }
+
+        & label {
+            cursor: pointer;
+
+            & i {
+                color: #fff;
+                font-size: 2.3em;
+                font-weight: bold;
+                text-shadow: 1px 1px 1px #000;
+            }
+        }
+    }
+}
+
+.activeLink {
+    color: #F05941;
+}
+
+.showNav {
+    transform: translateX(0%);
+}
+
+
+/* *======> Quran definition: <====== */
+
+.home-page {
+    margin-top: 90px;
+    padding: 10px;
+    color: #fff;
+
+    & h1,
+    h3 {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    & h2 {
+        margin-right: 20px;
+        margin-top: 30px;
+        text-align: start;
+    }
+}
+
+.quran--definition-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    column-gap: 100px;
+
+
+    & img {
+        width: 470px;
+        aspect-ratio: 2 / 1.7;
+        border-radius: 50%;
+    }
+
+    & p {
+        font-family: "Rubik";
+        font-size: 1.15em;
+    }
+}
+
+
+/* *=======> The reciters <====== */
+
+.favReciter {
+    display: block;
+    margin-top: 25px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+    width: fit-content;
+    background-color: #E3651D;
+    padding: 5px 5px 15px 5px;
+    border-radius: 10px;
+    transition: .5s;
+    margin-bottom: 50px;
+
+    & img {
+        width: 210px;
+        aspect-ratio: 2 / 1.7;
+        border-radius: 10px;
+    }
+
+    & .reciter-name {
+        font-size: 0.9em;
+        font-weight: bold;
+        margin-top: 5px;
+        text-align: center;
+        font-family: "Rubik";
+        text-shadow: 1px 1px 1px #000;
+    }
+}
+
+.favReciter:hover {
+    opacity: .7;
+}
+
+.reciters-box {
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+
+    & i {
+        margin-inline: 5px;
+        transition: .5s;
+        font-size: 2.3em;
+        cursor: pointer;
+    }
+
+    & i:hover {
+        opacity: .7;
+    }
+
+    & .reciters {
+        display: flex;
+        align-items: center;
+        gap: 15px !important;
+        overflow-x: auto;
+        padding: 30px 5px;
+        scroll-snap-type: x mandatory;
+
+
+        & a {
+            text-decoration: none;
+            flex: none;
+            width: calc((100% + 30px) / 4);
+            background-color: #E3651D;
+            padding: 5px 5px 15px 5px;
+            border-radius: 10px;
+            opacity: .5;
+            transition: .5s;
+            scroll-snap-align: start;
+
+            & img {
+                width: 100%;
+                aspect-ratio: 1 / 0.8;
+                border-radius: 10px;
+            }
+
+            & p {
+                color: #fff;
+                font-size: 0.8em;
+                font-weight: bold;
+                margin-top: 5px;
+                text-align: center;
+                font-family: "Rubik";
+                text-shadow: 1px 1px 1px #000;
+            }
+        }
+
+        & a:is(:not(:hover)) {
+            opacity: 0.7;
+            transform: scale(0.97);
+        }
+
+        & a:hover {
+            opacity: 1;
+        }
+
+    }
+}
+
+
+.chosen-reciter-box {
+    margin-top: 100px;
+    width: 100%;
+
+    &>a {
+        color: #000;
+        margin-right: 20px;
+        text-decoration: none;
+        background-color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        box-shadow: 1px 1px 5px 1px black;
+        transition: .5;
+    }
+
+    & a:hover {
+        opacity: .7;
+    }
+
+    & .chosen-reciter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        column-gap: 20px;
+        color: white;
+
+        & div p {
+            margin-block: 20px;
+            font-family: "Amiri";
+            text-shadow: 1px 1px 1px #000;
+            font-weight: 600;
+        }
+
+        & img {
+            width: 150px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            box-shadow: 1px 1px 1px 1px black;
+        }
+    }
+
+    & .sortBy-box {
+        margin-top: 50px;
+        width: fit-content;
+        margin-inline: auto;
+        color: #fff;
+        font-size: 1.3em;
+        border: 1.5px solid #088395;
+        padding: 10px;
+        border-radius: 10px;
+
+        & p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+
+            & i {
+                transition: .7s;
+            }
+
+            & span {
+                margin-right: 15px;
+                display: inline-block;
+                font-weight: 600;
+                cursor: pointer;
+                text-shadow: 1px 1px 1px black;
+            }
+        }
+    }
+
+    & .search-input-box {
+        margin-block: 20px;
+        margin-inline: auto;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        filter: drop-shadow(2px 2px 5px #000);
+        position: sticky;
+        cursor: move;
+        top: 71px;
+        z-index: 10;
+        transition: .5s;
+
+        &>div {
+            padding: 2px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 10px;
+
+            & input {
+                border: none;
+                outline: none;
+                padding: 13px 10px;
+                font-weight: bold;
+                width: 100%;
+            }
+
+            & p {
+                font-size: 1.5em;
+                margin-right: 10px;
+                cursor: pointer;
+
+                & i {
+                    font-weight: bold;
+                }
+            }
+
+            & p:hover {
+                opacity: .9
+            }
+        }
+    }
+
+    & .surahs-box {
+
+        padding: 20px;
+        display: grid;
+        align-items: center;
+        justify-content: space-around;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+
+        &>a {
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 2px solid #80808080;
+            border-radius: 10px;
+            column-gap: 20px;
+            text-decoration: none;
+            background-color: transparent;
+
+            & div p {
+                font-family: 'Noto Nastaliq Urdu';
+                font-weight: 600;
+                letter-spacing: 1.8px;
+                text-shadow: 1px 1px 1px #000;
+            }
+
+            & .surah-number {
+                background-color: #0883964d;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                font-weight: bold;
+                align-items: center;
+                justify-content: center;
+                clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            }
+
+        }
+
+        &>a:hover {
+            border: 2px solid #0ac8e6;
+        }
+
+        &>a:hover .surah-number {
+            background-color: #0ac8e6;
+            color: #000;
+        }
+
+        .notFound-search {
+            color: white;
+            grid-column: span 3;
+            text-align: center;
+            justify-self: center;
+
+
+            & p {
+                font-size: 1.5em;
+                margin-bottom: 20px;
+                text-shadow: 1px 1px 5px #000;
+            }
+        }
+    }
+}
+
+.rotateIcon {
+    transform: rotate(45deg);
+}
+
+.play-surah-box {
+    margin-top: 100px;
+    height: calc(100vh - 220px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &>a {
+        color: #000;
+        background-color: #fff;
+        padding: 5px 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        margin-right: 10px;
+        font-weight: 600;
+        transition: .5s;
+        margin-bottom: 20px;
+        position: absolute;
+        top: 100px;
+        right: 20px;
+    }
+
+    & a:hover {
+        opacity: .7;
+    }
+
+    & div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        & p {
+            color: #fff;
+            font-family: "Noto Nastaliq Urdu";
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-align: center;
+            text-shadow: 1px 1px 1px #000;
+            font-size: 2em;
+            margin-top: 25px;
+        }
+
+        & img {
+            width: 60%;
+            aspect-ratio: 4 / 2;
+            margin-block: 20px;
+        }
+
+    }
+
+    & .videoPlay-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: #088395;
+        width: 100%;
+        column-gap: 45px;
+        padding: 30px 0;
+        margin-inline: auto;
+        position: fixed;
+        bottom: 0;
+
+        & .video-progress {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 10px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            border-radius: 1px;
+            z-index: -1;
+
+            & p {
+                position: absolute;
+                width: 10px;
+                height: 100%;
+                background-color: white;
+                z-index: 2;
+                top: -25px;
+                right: 1px;
+                border-radius: 1px;
+
+            }
+
+
+            & span {
+                position: absolute;
+                color: white;
+                font-weight: bold;
+                letter-spacing: 1px;
+                top: -25px;
+                text-shadow: 1px 1px 1px black;
+            }
+
+            & span:first-child {
+                right: 5px;
+            }
+
+            & span:last-child {
+                left: 5px;
+            }
+
+        }
+
+        & p {
+            cursor: pointer;
+            font-size: 1.5em;
+
+            &>a {
+                color: #fff;
+            }
+        }
+
+        & p:is(:first-child, :last-child) {
+            font-size: 1em;
+        }
+
+
+        & p:hover {
+            opacity: .8;
+        }
+    }
+
+    .videoPlay-box::before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(#DD58D6, #C21292, #FF5F9E);
+        width: 100%;
+        height: 100%;
+        left: -50px;
+        top: 50px;
+        border-radius: 50%;
+        z-index: -1;
+        filter: blur(150px);
+    }
+
+    .videoPlay-box::after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(#070A52, #C21292, #FF5F9E);
+        width: 100%;
+        height: 100%;
+        right: -50px;
+        bottom: 50px;
+        border-radius: 50%;
+        z-index: -1;
+        filter: blur(150px);
+    }
+}
+
+/* * ========> style the footer <==========*/
+
+footer {
+    margin-top: 100px;
+    padding: 15px 20px;
+    background: linear-gradient(#fff, #FFF6F6, #EEEEEE);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &>div:first-child {
+        width: 40%;
+
+        & p {
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+    }
+
+    &>div:nth-child(2) nav {
+        margin-top: 15px;
+
+        & li {
+            list-style: none;
+
+            & a {
+                display: inline-block;
+                color: #711DB0;
+                font-size: 1.1em;
+                padding: 5px 10px;
+                font-weight: 600;
+            }
+
+            & a:hover {
+                text-decoration: underline !important;
+            }
+        }
+    }
+
+    &>div:last-child {
+        & p {
+            margin-block: 20px;
+            font-size: 1.1em;
+        }
+
+        & p a {
+            font-weight: bold;
+        }
+
+        & div {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            & a {
+                color: #0C356A;
+                transition: .5s;
+                text-decoration: none;
+                font-size: 1.3em;
+            }
+
+            & a:hover {
+                opacity: .8;
+            }
+        }
+    }
+}
+
+.backTopBtn {
+    display: none;
+    background-color: #fff;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 40%;
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 1px 1px 20px 1px #0000004d;
+    border: none;
+    outline: none;
+    transition: .6s ease-in;
+
+
+    & i {
+        font-weight: bold;
+        font-size: 2em;
+    }
+}
+
+.backTopBtn:hover {
+    opacity: .8;
+}
+
+/* *======> Style the Not found page <======= */
+
+.notFound-box {
+    color: #fff;
+    text-align: center;
+    margin-top: 110px;
+    width: 80%;
+    margin-inline: auto;
+
+    & h1 {
+        font-size: 3.5em;
+    }
+
+    & h2,
+    p,
+    a {
+        font-size: 1.2em;
+    }
+
+    & h1,
+    h2,
+    p {
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 1px #000;
+    }
+
+    & a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #0ac8e6;
+        padding: 8px 16px;
+        border-radius: 20px;
+        transition: .6s;
+    }
+
+    & a:hover {
+        opacity: .8;
+    }
+}
+
+/**==========> Media Query <=========*/
+
+@media screen and (max-width: 767px) {
+    * {
+        --webkit-tap-highlight-color: transparent;
+        cursor: default !important;
+    }
+
+    header {
+
+        justify-content: space-between;
+        flex-direction: row-reverse;
+
+        & img {
+            margin-left: 20px;
+        }
+
+        & nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 60%;
+            flex-direction: column;
+            margin-left: 0;
+            position: absolute;
+            top: 75px;
+            right: 0;
+            padding: 15px;
+            border-bottom-left-radius: 10px;
+            transform: translateX(100%);
+            transition: .7s;
+
+
+            & ul {
+                width: 100%;
+                justify-content: center;
+                flex-direction: column;
+
+                & li {
+                    padding: 12px;
+                }
+            }
+
+            & a {
+                font-size: 1.2em;
+                color: #fff;
+                font-weight: bold;
+                text-shadow: 1px 1px 1px #000;
+            }
+
+            & a:last-child {
+                margin-top: 20px;
+            }
+        }
+
+        .menu-icon {
+            display: block;
+        }
+    }
+
+    .quran--definition-box {
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 40px;
+        padding: 20px 10px;
+
+        & img {
+            width: 90%;
+        }
+    }
+
+
+    .reciters-box {
+        width: 98%;
+
+        & .reciters {
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+            padding: 20px 5px;
+            column-gap: 3px;
+
+            & a {
+                width: 50%;
+                background-color: #E3651D;
+
+                & img {
+                    width: 100%;
+                    aspect-ratio: 1 / 1.02;
+                }
+            }
+        }
+    }
+
+    .favReciter {
+        margin-top: 20px;
+        width: 45%;
+
+        & img {
+            width: 100%;
+            aspect-ratio: 2 / 1.7;
+            border-radius: 10px;
+        }
+
+    }
+
+    .chosen-reciter-box {
+
+        & .surahs-box {
+            grid-template-columns: auto auto;
+            padding: 20px 5px;
+            align-items: stretch;
+
+            & a {
+                column-gap: 0.5%;
+                padding: 20px 10px;
+
+                & div {
+                    column-gap: 1px;
+
+                    & p {
+                        font-size: 0.95em;
+                        word-break: keep-all;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+
+            & .notFound-search {
+                grid-column: span 2;
+            }
+        }
+    }
+
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        row-gap: 20px;
+
+        &>div:first-child {
+            width: 95%;
+        }
+
+        &>div:nth-child(2) {
+            width: 100%;
+
+            & nav ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+        }
+
+        &>div:last-child div {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    .reciters-box .reciters {
+        & a {
+            width: 95%;
+        }
+
+        & a:is(:not(:hover)) {
+            transform: scale(1);
+        }
+    }
+}

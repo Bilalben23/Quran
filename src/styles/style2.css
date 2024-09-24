@@ -1,0 +1,205 @@
+.videos-box {
+    width: 90%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding: 20px;
+    gap: 55px 2%;
+    margin-inline: auto;
+
+    &>div {
+        border-radius: 10px;
+        padding: 5px 2px 10px 5px;
+        background-color: #E3651D;
+        width: 90%;
+        opacity: .5;
+
+        & div {
+            position: relative;
+
+            & .video-number {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                top: 0;
+                right: 8px;
+                padding: 10px;
+                background-color: #fff;
+                border-radius: 50%;
+                color: #000;
+                box-shadow: 1px 1px 1px 1px #000;
+            }
+
+            & video {
+                width: 100%;
+                aspect-ratio: 4 / 2;
+                border-radius: 10px;
+                object-fit: fill;
+            }
+
+            & video[poster] {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        & p {
+            margin-top: 8px;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #000;
+            font-size: 1.1em;
+        }
+    }
+
+    &>div:hover {
+        opacity: 1;
+    }
+}
+
+.tafsir-section {
+    margin-top: 120px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+
+    & h1 {
+        text-align: center;
+    }
+
+    & .tafasir {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 15px;
+        gap: 20px;
+
+        & video {
+            width: 100%;
+        }
+    }
+}
+
+.tafsir-section {
+
+    & .tafasir {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 15px;
+        gap: 30px;
+
+        & div {
+            background-color: #E3651D;
+            padding: 20px 10px;
+            border-radius: 30px;
+            box-shadow: 1px 1px 5px 1px #000;
+            opacity: .5;
+            transition: .5s;
+
+            & p {
+                margin-bottom: 15px;
+                text-align: center;
+                font-family: "Amiri";
+                font-size: 0.8em;
+                font-weight: bold;
+            }
+
+            & audio {
+                width: 100%;
+            }
+        }
+    }
+
+    & div:hover {
+        opacity: 1;
+    }
+}
+
+.about-box {
+    margin-top: 120px;
+    color: #fff;
+    padding: 10px 15px;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 1.2em;
+
+    & h1 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    & p {
+        margin-block: 30px;
+        text-indent: 20px;
+    }
+
+    & ul {
+
+        & li {
+            list-style: none;
+            margin-block: 10px;
+            margin-right: 35px;
+
+            & a {
+                text-decoration: underline;
+                color: #E3651D;
+                letter-spacing: 1px;
+                word-spacing: 1px;
+                display: block;
+            }
+        }
+    }
+}
+
+.settings-box {
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    & p {
+        font-size: 5em;
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .videos-box {
+        width: 98%;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        row-gap: 40px;
+        margin-inline: auto;
+
+        &>div {
+            width: 100%;
+
+            & video {
+                width: 100%;
+                aspect-ratio: 4 / 3.2;
+                border-radius: 10px;
+                object-fit: fill;
+            }
+        }
+    }
+
+    .tafsir-section {
+        width: 100%;
+
+        & .tafasir {
+            grid-template-columns: auto auto;
+            gap: 20px;
+        }
+    }
+}
