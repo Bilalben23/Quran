@@ -23,7 +23,7 @@ Throughout the development of this project, I gained valuable experience in seve
 - **Routing**: Mastered navigation between different components and views using `react-router-dom`.
 
 ## Visit the App
-You can visit the Quran App at your-deployed-app-url. (https://bilalben23.github.io/Quran/)[visit app]
+You can visit the Quran App at: [visit app](https://bilalben23.github.io/Quran/)
 ---
 
 # تطبيق القرآن
